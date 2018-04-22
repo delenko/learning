@@ -1,0 +1,12 @@
+package basics;
+
+public class basics {
+
+	public static void main(String[] args) {
+		Info starting = new Info();
+		starting.basicInfo();
+		Human basicStats = new Human();
+		basicStats.humanStats();
+	}
+
+}
