@@ -1,0 +1,8 @@
+package basics;
+
+public class Info {
+
+	public void basicInfo() {
+		System.out.println("Welcome to this side project!");
+	}
+}
