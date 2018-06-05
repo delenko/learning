@@ -1,12 +1,29 @@
 package basics;
 
-public class basics {
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
-	public static void main(String[] args) {
+
+public class Base extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        primaryStage.setTitle( "Basics" );
+        StackPane root = new StackPane(  );
+        Scene scene = new Scene(root,1920,1080);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+	public static void main (String [] args) {
+        launch(args);
 		Info starting = new Info();
 		starting.basicInfo();
-		Human basicStats = new Human();
+		Humans basicStats = new Humans();
 		basicStats.humanStats();
+
 	}
 
 }
