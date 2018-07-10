@@ -1,7 +1,11 @@
 package basics;
 
+import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
-public class Human {
+public class Humans {
 	private int health = 100;
 	private int attack = 1;
 	private int strength = 1;
@@ -9,13 +13,24 @@ public class Human {
 	private int defense = 1;
 	
 	public void humanStats(){
-		
-		System.out.println("The human stats are "+health+" health.");
-		System.out.println("The human stats are "+attack+" attack.");
-		System.out.println("The human stats are "+strength+" strength.");
-		System.out.println("The human stats are "+magic+" magic.");
-		System.out.println("The human stats are "+defense+" defense.");
-		
+
+        GridPane third = new GridPane(  );
+        Scene sceneThree = new Scene( third, 400,400 );
+        Stage secondStage = new Stage(  );
+        secondStage.setTitle( "Human Stats" );
+        secondStage.setScene( sceneThree );
+        secondStage.show();
+        Text healthOne = new Text(  "The human stats are "+health+" health."  );
+        Text attackOne = new Text ("The human stats are "+attack+" attack.");
+        Text strengthOne = new Text("The human stats are "+strength+" strength.");
+        Text magicOne = new Text("The human stats are "+magic+" magic.");
+        Text defenseOne = new Text("The human stats are "+defense+" defense.");
+        third.add(healthOne,0,0);
+        third.add(strengthOne,0,1);
+        third.add(attackOne,0,2);
+        third.add(defenseOne,0,3);
+        third.add(magicOne,0,4);
+
 	}
 
 	public int healthIncrease(int health) {
@@ -24,4 +39,5 @@ public class Human {
 		newHealth = health +1;
 		return newHealth;
 	}
+
 }

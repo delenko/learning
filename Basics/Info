@@ -1,8 +1,23 @@
 package basics;
 
+
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.scene.control.Label;
+
 public class Info {
 
 	public void basicInfo() {
-		System.out.println("Welcome to this side project!");
+        StackPane second = new StackPane(  );
+
+		Scene sceneOne = new Scene(second,400,400);
+        Stage newStage = new Stage(  );
+        newStage.setTitle( "Info" );
+        newStage.setScene( sceneOne );
+        newStage.show();
+        Label info = new Label("Welcome to this side project!" );
+        second.getChildren().add(info);
+
 	}
 }
