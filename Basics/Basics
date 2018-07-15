@@ -4,12 +4,16 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class Base extends Application {
 
@@ -26,6 +30,15 @@ public class Base extends Application {
         vertP.setSpacing( 10 );
         vertP.setPadding( new Insets( 10, 10, 10, 10 ) );
         root.setLeft( vertP );
+        SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
+        Calendar cal = Calendar.getInstance();
+        HBox timeBox = new HBox(  );
+        timeBox.setPadding( new Insets(5, 5, 5, 5 ));
+        timeBox.setAlignment( Pos.CENTER );
+        Text time = new Text( dateFormat.format( cal.getTime() ) );
+        timeBox.getChildren().add( time );
+        root.setTop( timeBox );
+
 
         //The menu you will see when it opens.
         //Button Information
